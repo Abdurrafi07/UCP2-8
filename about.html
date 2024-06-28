@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .background-section {
+            background-image: url('./assets/about.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .background-section h1 {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .cards-section {
+            padding: 50px 0;
+        }
+
+        .card {
+            border-radius: 15px; /* Membuat sisi kartu tumpul */
+        }
+
+        .card img, .modal-body img {
+            border-radius: 15px; /* Membuat gambar dalam kartu dan modal memiliki sisi tumpul */
+        }
+
+        .modal-body img {
+            max-width: 100%;
+            height: auto;
+        }
+        .icon-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .icon-box i {
+            font-size: 50px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand logo-text" href="#">Resto Sunda</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Background Section with Text -->
+    <section class="background-section">
+        <h1>Resto Sunda</h1>
+    </section>
+
+   <!-- Cards Section -->
+   <section class="cards-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./assets/Dessert.png" class="card-img-top img-fluid" alt="Card image 1" data-toggle="modal" data-target="#modal1" style="max-width: 100%; height: auto;">
+                </div>
+                <p class="mt-2 text-center">Es Doger.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./assets/Kopi.png" class="card-img-top img-fluid" alt="Card image 2" data-toggle="modal" data-target="#modal2" style="max-width: 100%; height: auto;">
+                </div>
+                <p class="mt-2 text-center">Kopi Sunda.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./assets/Kue.png" class="card-img-top img-fluid" alt="Card image 3" data-toggle="modal" data-target="#modal3" style="max-width: 100%; height: auto;">
+                </div>
+                <p class="mt-2 text-center">Putu Ayu.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./assets/Sate.png" class="card-img-top img-fluid" alt="Card image 4" data-toggle="modal" data-target="#modal4" style="max-width: 100%; height: auto;">
+                </div>
+                <p class="mt-2 text-center">Sate Maranggi.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./assets/Liwet.png" class="card-img-top img-fluid" alt="Card image 5" data-toggle="modal" data-target="#modal5" style="max-width: 100%; height: auto;">
+                </div>
+                <p class="mt-2 text-center">Nasi Liwet.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./assets/Kar.png" class="card-img-top img-fluid" alt="Card image 6" data-toggle="modal" data-target="#modal6" style="max-width: 100%; height: auto;">
+                </div>
+                <p class="mt-2 text-center">karedok.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Additional Text Section -->
+<section class="text-left my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Restoran Sunda</h1>
+                <p>Restoran Sunda kami menyajikan berbagai hidangan tradisional Sunda yang lezat dan autentik, cocok untuk dinikmati bersama keluarga dan teman. Kami menggunakan bahan-bahan segar dan bumbu tradisional yang khas untuk memberikan pengalaman kuliner yang tak terlupakan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Modals -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="./assets/Dessert.png" class="img-fluid" alt="Card image 1">
+                <p>Es Doger adalah hidangan penutup tradisional dari masakan Sunda. Terdiri dari es serut dengan berbagai topping seperti alpukat, nangka, dan kelapa, disajikan dengan susu kental manis dan santan.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="./assets/Kopi.png" class="img-fluid" alt="Card image 2">
+                <p>Kopi Sunda dikenal dengan cita rasanya yang khas dan kuat. Kopi ini sering dinikmati dengan camilan tradisional seperti pisang goreng atau ketan bakar.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="./assets/Kue.png" class="img-fluid" alt="Card image 3">
+                <p>Putu Ayu adalah kue tradisional dari masakan Sunda yang dikukus. Terbuat dari tepung beras, kelapa, dan gula merah, sering kali berwarna hijau dari daun pandan, dan disajikan sebagai hidangan penutup atau camilan.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="./assets/Sate.png" class="img-fluid" alt="Card image 4">
+                <p>Sate Maranggi adalah sate khas dari daerah Maranggi di Jawa Barat. Dibuat dari daging sapi yang dipanggang dengan bumbu rempah khas Sunda, disajikan dengan sambal kacang dan lalapan.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="./assets/Liwet.png" class="img-fluid" alt="Card image 5">
+                <p>Nasi Liwet adalah hidangan nasi dari Sunda yang dimasak dengan santan dan rempah-rempah, biasanya disajikan dengan lauk ayam goreng, telur dadar, tempe, dan ikan teri.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="./assets/karedok.png" class="img-fluid" alt="Card image 6">
+                <p>Karedok adalah salah satu jenis sayur mentah khas Sunda yang dicampur dengan bumbu kacang pedas. Biasanya terdiri dari mentimun, kacang panjang, taoge, kubis, dan tauge, disajikan sebagai salad atau lauk.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <!-- Card Section -->
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6 icon-box">
+                        <i class="fas fa-utensils"></i>
+                        <div>
+                            <h1>Makanan Lezat</h1>
+                            <p>Nikmati hidangan khas Sunda yang menggugah selera.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 icon-box">
+                        <i class="fas fa-coffee"></i>
+                        <div>
+                            <h1>Kopi Sunda Terbaik</h1>
+                            <p>Rasakan kehangatan kopi Sunda yang segar di setiap tegukan.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 icon-box">
+                        <i class="fas fa-wine-glass-alt"></i>
+                        <div>
+                            <h1>Anggur Pilihan</h1>
+                            <p>Nikmati anggur lokal yang berkualitas dengan pemandangan alam Sunda yang menakjubkan.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 icon-box">
+                        <i class="fas fa-ice-cream"></i>
+                        <div>
+                            <h1>Es Krim Enak</h1>
+                            <p>Cicipi berbagai pilihan es krim tradisional Sunda yang memanjakan lidah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="./assets/Resto.png" class="img-fluid" alt="Image" style="border-radius: 15px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1 class="logo-text">Resto Sunda</h1>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        <a href="index.html" style="color: black; text-decoration: underline;">Home</a>
+                    </p>
+                    <p>
+                        <a href="about.html" style="color: black; text-decoration: underline;">About</a>
+                    </p>
+                    <p>
+                        <a href="contact.html" style="color: black; text-decoration: underline;">Contact</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p><a href="mailto:loremipsum@gmail.com" style="color: black; text-decoration: underline;">RestoSunda@gmail.com</a></p>
+                    <p><a href="https://wa.me/+62 812-3456-7890" target="_blank" style="color: black; text-decoration: underline;">+62 812-3456-7890</a></p>
+                    <p>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> | 
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

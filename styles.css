@@ -1,0 +1,18 @@
+
+
+.logo-text {
+    font-family: 'Arial Black', sans-serif; /* Contoh penggunaan font bold */
+    font-size: 24px; /* Ukuran teks */
+    text-transform: uppercase; /* Ubah teks menjadi huruf besar */
+    letter-spacing: 2px; /* Jarak antar huruf */
+    color: #333; /* Warna teks */
+    padding: 10px 20px; /* Padding untuk membuatnya terlihat lebih besar */
+    border-radius: 5px; /* Untuk sudut yang sedikit melengkung */
+    background-color: #ffc107; /* Warna latar belakang */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+.logo-text:hover {
+    background-color: #ffca28; /* Warna latar belakang saat dihover */
+    color: #333; /* Warna teks saat dihover */
+}

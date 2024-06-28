@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Background color */
+        }
+
+        .background-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            min-height: 100vh; /* Full viewport height */
+            background-image: url('./assets/about.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .form-container {
+            max-width: 800px; /* Lebar maksimum form */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            width: 100%;
+            padding: 12px; /* Padding lebih besar */
+            margin-bottom: 15px; /* Margin antar elemen form */
+            border: none;
+            border-radius: 5px;
+            font-size: 18px; /* Ukuran teks lebih besar */
+        }
+
+        .form-container textarea {
+            resize: vertical; /* Allow vertical resizing of textarea */
+        }
+
+        .form-container button[type="submit"] {
+            background-color: #ffc107;
+            color: #333;
+            border: none;
+            padding: 15px 20px; /* Padding tombol lebih besar */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        .form-container button[type="submit"]:hover {
+            background-color: #ffca28;
+        }
+         /* Existing CSS remains unchanged */
+
+    .header-section {
+        padding: 50px 20px;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    .header-section h2 {
+        color: #007bff; /* Blue color */
+    }
+
+    .header-section p {
+        font-size: 18px;
+    }
+
+    .google-maps-section {
+        padding: 20px;
+    }
+
+    .google-maps-container {
+        width: 100%; /* Full width */
+        height: 0;
+        padding-top: 50%; /* Maintain 1:1 aspect ratio */
+        position: relative;
+    }
+
+    .google-maps {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand logo-text" href="#">Resto Sunda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Background Section with Form -->
+<section class="background-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 style="color: yellow;">Pesan atau Reservasi</h1>
+                <p style="color: rgb(149, 0, 255);">Silakan pesan atau lakukan reservasi dengan mengisi formulir di bawah ini.</p>
+                <div class="form-container">
+                    <form id="contactForm">
+                        <div class="form-group text-left"> <!-- Adjusted to text-left -->
+                            <label for="name">Nama</label>
+                            <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="form-group text-left"> <!-- Adjusted to text-left -->
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda" required>
+                        </div>
+                        <div class="form-group text-left"> <!-- Adjusted to text-left -->
+                            <label for="message">Pesan Anda</label>
+                            <textarea class="form-control" id="message" rows="8" placeholder="Tulis pesan Anda di sini" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="submissionModal" tabindex="-1" role="dialog" aria-labelledby="submissionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="submissionModalLabel">Form Submission</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalName"></p>
+                    <p id="modalEmail"></p>
+                    <p id="modalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Header Section -->
+<section class="header-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Informasi Lebih Lanjut</h2>
+                <p>Silakan hubungi kami jika Anda memerlukan informasi lebih lanjut atau memiliki pertanyaan..</p>
+                <p>Nomor Telepon: +62 812-3456-7890<p>
+                <p>Email: RestoSunda@gmail.com</p>
+            </div>
+            <div class="col-md-6">
+                <!-- Google Maps Section -->
+                <section class="google-maps-section">
+                    <div class="google-maps-container">
+                        <iframe class="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.041386796672!2d106.92662951523827!3d-6.927119369654871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68f5627b0b35c9%3A0x16e71c62b5ebec81!2sSukabumi%2C%20West%20Java%2C%20Indonesia!5e0!3m2!1sen!2s!4v1624897394251!5m2!1sen!2s" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1 class="logo-text">Resto Sunda</h1>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        <a href="index.html" style="color: black; text-decoration: underline;">Home</a>
+                    </p>
+                    <p>
+                        <a href="about.html" style="color: black; text-decoration: underline;">About</a>
+                    </p>
+                    <p>
+                        <a href="contact.html" style="color: black; text-decoration: underline;">Contact</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p><a href="mailto:loremipsum@gmail.com" style="color: black; text-decoration: underline;">RestoSunda@gmail.com</a></p>
+                    <p><a href="https://wa.me/+62 812-3456-7890" target="_blank" style="color: black; text-decoration: underline;">+62 812-3456-7890</a></p>
+                    <p>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> | 
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for form submission alert -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Set modal content
+            document.getElementById('modalName').textContent = 'Name: ' + name;
+            document.getElementById('modalEmail').textContent = 'Email: ' + email;
+            document.getElementById('modalMessage').textContent = 'Message: ' + message;
+
+            // Show modal
+            $('#submissionModal').modal('show');
+        });
+    </script>
+</body>
+</html>

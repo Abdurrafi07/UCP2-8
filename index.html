@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .card-custom {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        .card-custom img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-custom .text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .bg-video {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .bg-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+        .rounded-img {
+            border-radius: 15px; /* You can adjust this value as needed */
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-nav {
+            margin: 0 auto;
+        }
+        .navbar-brand {
+            margin-right: auto;
+        }
+        .navbar-toggler {
+            margin-left: auto;
+        }
+        .card-group .card-custom {
+            margin-right: 15px;
+        }
+        .card-group .card-custom:last-child {
+            margin-right: 0;
+        }
+        .navbar .navbar-brand {
+            margin-right: 20px; /* Adjust this value to move the logo to the right */
+        }
+        .navbar-nav {
+            margin-left: -20px; /* Adjust this value to move the navbar items to the left */
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-nav {
+            margin: 0 auto;
+        }
+        .navbar-brand {
+            margin-right: auto;
+        }
+        .navbar-toggler {
+            margin-left: auto;
+        }
+        .card-group .card-custom {
+            margin-right: 15px;
+        }
+        .card-group .card-custom:last-child {
+            margin-right: 0;
+        }
+        .navbar .navbar-brand {
+            margin-right: 20px; /* Adjust this value to move the logo to the right */
+        }
+        .navbar-nav {
+            margin-left: -20px; /* Adjust this value to move the navbar items to the left */
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand logo-text" href="#">Resto Sunda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+
+    
+
+    <!-- Hero Section -->
+    <section>
+        <div class="bg-video" id="home">
+            <video src="./videos/video.mp4" autoplay muted loop></video>
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1>Selamat Datang di Resto Sunda</h1>
+                <p>Rasakan kelezatan masakan Sunda otentik dengan bahan-bahan segar pilihan.</p>
+                <button class="btn btn-primary" onclick="window.location.href='about.html'">Pelajari Lebih Lanjut</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Div with Image and Paragraph -->
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./assets/Des.png" class="img-fluid rounded-img" alt="Image">
+                </div>
+                <div class="col-md-6">
+                    <h1>Resto Sunda</h1>
+                    <p>Menyajikan masakan Sunda dengan bahan-bahan segar dan rempah-rempah pilihan, kami berkomitmen untuk memberikan pengalaman makan yang tak terlupakan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Div with 3 Cards and Header -->
+    <section>
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Layanan Kami</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card-custom" data-toggle="modal" data-target="#cardModal1">
+                        <img src="./assets/karedok.png" alt="Card Image 1">
+                        <div class="text">Nikmati hidangan khas Sunda yang lezat dan bergizi.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom" data-toggle="modal" data-target="#cardModal2">
+                        <img src="./assets/img.png" alt="Card Image 2">
+                        <div class="text">Kreasikan acara Anda dengan menu spesial dari dapur kami.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom" data-toggle="modal" data-target="#cardModal3">
+                        <img src="./assets/tutug.png" alt="Card Image 3">
+                        <div class="text">Dapatkan pengalaman makan yang autentik dengan sentuhan tradisional Sunda.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Div with h1, p, and button -->
+    <section>
+        <div class="container mt-5 text-center">
+            <h1>Kenikmatan Kuliner Sunda</h1>
+            <p>Rasakan kehangatan dan kelezatan masakan Sunda yang terbaik di kota ini. Kami hadir untuk memenuhi selera dan menghidangkan pengalaman tak terlupakan bagi Anda.</p>
+            <a href="contact.html" class="btn btn-primary">Hubungi Kami</a>
+        </div>
+    </section>
+    
+
+   <!-- Footer -->
+<<footer class="bg-light text-center mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="logo-text">Resto Sunda</h1>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <a href="index.html" style="color: black; text-decoration: underline;">Home</a>
+                </p>
+                <p>
+                    <a href="about.html" style="color: black; text-decoration: underline;">About</a>
+                </p>
+                <p>
+                    <a href="contact.html" style="color: black; text-decoration: underline;">Contact</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p><a href="mailto:loremipsum@gmail.com" style="color: black; text-decoration: underline;">RestoSunda@gmail.com</a></p>
+                <p><a href="https://wa.me/+62 812-3456-7890" target="_blank" style="color: black; text-decoration: underline;">+62 812-3456-7890</a></p>
+                <p>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> | 
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
